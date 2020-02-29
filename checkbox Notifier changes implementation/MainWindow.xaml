@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel Name="Clmstack" >
+            <Label Name="chkClmSelection" Content="Selection"></Label>
+            <ComboBox Name="chkSelection" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Margin="0" Width="200" IsChecked="{Binding IsChecked,Mode=TwoWay}" Content="{Binding MyString}" VerticalAlignment="Top" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
     </Grid>
 </Window>
